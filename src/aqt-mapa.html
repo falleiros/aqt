@@ -55,7 +55,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                           "type": "Feature",
                           "geometry": {
                               "type": "Point",
-                              "coordinates": [-22.2178800, -54.8124210]
+                              "coordinates": [-22.217427, -54.812534]
                           },
                           "properties": {
                               "nome": "Parque dos Ipês",
@@ -72,9 +72,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         const mapaEl = this.$.mapa;
 
         this.mapa = new google.maps.Map(mapaEl, {
-          center: new google.maps.LatLng(-22.2178800,-54.8124210),
+          center: new google.maps.LatLng(-54.812534,-22.217427),
           scrollwheel: false,
-          zoom: 14,
+          zoom: 10,
           mapTypeId: 'terrain'
         });        
       }
@@ -85,7 +85,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         for (var i = 0; i < pracas.features.length; i++) {
           var coords = pracas.features[i].geometry.coordinates;
-          var latLng = new google.maps.LatLng(coords[1],coords[0]);
+          var latLng = new google.maps.LatLng(coords[0],coords[1]);
           
           console.log(coords);
 

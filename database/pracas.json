@@ -1,0 +1,31 @@
+{
+    "type": "Object",
+    "value": {
+        "type": "FeatureCollection",
+        "features": [
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-54.8124210, -22.2178800]
+                },
+                "properties": {
+                    "nome": "Parque dos Ipês",
+                    "esportes": ["Futebol", "Volei", "Basquete"]
+                }
+            },
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-54.8124210, -22.2178800]
+                },
+                "properties": {
+                    "nome": "Parque do Lago",
+                    "esportes": ["Futebol", "Basquete"]
+                }
+            }
+        ]
+    }
+  
+}
