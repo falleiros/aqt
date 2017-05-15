@@ -48,27 +48,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
             pracas: {
               type: Object
-            }
-
-            // pracas: {
-            //   type: Object,
-            //   value: {
-            //       "type": "FeatureCollection",
-            //       "features": [
-            //           {
-            //               "type": "Feature",
-            //               "geometry": {
-            //                   "type": "Point",
-            //                   "coordinates": [-22.217427, -54.812534]
-            //               },
-            //               "properties": {
-            //                   "nome": "Parque dos Ipês",
-            //                   "esportes": ['Futebol', 'Volei', 'Basquete']
-            //               }
-            //           }
-            //       ]
-            //   }
-            // }   
+            }  
           }
       }
 
@@ -77,7 +57,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         this.mapa = new google.maps.Map(mapaEl, {
           center: new google.maps.LatLng(-22.217427,-54.812534),
-          scrollwheel: false,
+          scrollwheel: true,
           zoom: 14,
           mapTypeId: 'terrain'
         });        
