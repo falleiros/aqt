@@ -47,24 +47,28 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             },
 
             pracas: {
-              type: Object,
-              value: {
-                  "type": "FeatureCollection",
-                  "features": [
-                      {
-                          "type": "Feature",
-                          "geometry": {
-                              "type": "Point",
-                              "coordinates": [-22.217427, -54.812534]
-                          },
-                          "properties": {
-                              "nome": "Parque dos Ipês",
-                              "esportes": ['Futebol', 'Volei', 'Basquete']
-                          }
-                      }
-                  ]
-              }
-            }   
+              type: Object
+            }
+
+            // pracas: {
+            //   type: Object,
+            //   value: {
+            //       "type": "FeatureCollection",
+            //       "features": [
+            //           {
+            //               "type": "Feature",
+            //               "geometry": {
+            //                   "type": "Point",
+            //                   "coordinates": [-22.217427, -54.812534]
+            //               },
+            //               "properties": {
+            //                   "nome": "Parque dos Ipês",
+            //                   "esportes": ['Futebol', 'Volei', 'Basquete']
+            //               }
+            //           }
+            //       ]
+            //   }
+            // }   
           }
       }
 
@@ -83,20 +87,26 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         const pracas = this.pracas;
         const mapa = this.mapa;
 
-        for (var i = 0; i < pracas.features.length; i++) {
-          var coords = pracas.features[i].geometry.coordinates;
-          var latLng = new google.maps.LatLng(coords[0],coords[1]);
-          
-          console.log(coords);
+        const db = firebase.database();
+        const ref = db.ref('pracas');
 
-          var marker = new google.maps.Marker({
-            position: latLng,
-            map: mapa,
-            title: pracas.features[i].properties.nome
-          });
+        ref.on('value', function(snapshotPracas){
+          var pracas = snapshotPracas.val().value;
 
-          console.log(marker);
-        }
+          for (var i = 0; i < pracas.features.length; i++) {
+            console.log(pracas.features[i].properties.esportes);
+
+            var coords = pracas.features[i].geometry.coordinates;
+            var latLng = new google.maps.LatLng(coords[0],coords[1]);
+
+            var marker = new google.maps.Marker({
+              position: latLng,
+              map: mapa,
+              title: pracas.features[i].properties.nome
+            });
+
+          }
+        });        
       }
 
       ready(){

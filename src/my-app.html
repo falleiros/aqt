@@ -22,6 +22,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
 
+<link rel="import" href="../bower_components/polymerfire/firebase-app.html">
+<link rel="import" href="../bower_components/polymerfire/firebase-auth-script.html">
+<link rel="import" href="../bower_components/polymerfire/firebase-database-script.html">
+<link rel="import" href="../bower_components/polymerfire/firebase-storage-script.html">
+<link rel="import" href="../bower_components/polymerfire/firebase-messaging-script.html">
+
 <link rel="import" href="my-icons.html">
 
 <dom-module id="my-app">
@@ -64,6 +70,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         font-weight: bold;
       }
     </style>
+
+    <firebase-app
+      id="aqui-tem-esporte"
+      database-url="https://aqui-tem-esporte.firebaseio.com" 
+      storage-bucket="aqui-tem-esporte.appspot.com" 
+      api-key="AIzaSyCRJnI_QGAQTxpEnrvV-aA5YQPdS6-vaG8" 
+      messaging-sender-id="618796704244" 
+      auth-domain="aqui-tem-esporte.firebaseapp.com">
+    </firebase-app>
 
     <app-location route="{{route}}"></app-location>
     <app-route
