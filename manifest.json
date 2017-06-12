@@ -1,7 +1,7 @@
 {
-  "name": "Meu Aplicativo",
-  "short_name": "Meu Aplicativo",
-  "start_url": "/?homescreen=1",
+  "name": "Aqui tem esporte",
+  "short_name": "Aqui tem esporte",
+  "start_url": "/index.html",
   "display": "standalone",
   "theme_color": "#3f51b5",
   "background_color": "#3f51b5",

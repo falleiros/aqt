@@ -9,7 +9,8 @@
         },
         "properties" : {
           "esportes" : [ "Futebol", "Volei", "Basquete" ],
-          "nome" : "Parque dos Ipês"
+          "nome" : "Parque dos Ipês",
+          "img": "https://firebasestorage.googleapis.com/v0/b/aqui-tem-esporte.appspot.com/o/img-pracas%2Fparque-dos-ipes.jpg?alt=media&token=7e1eaef2-48ea-4b93-9501-134f619017b2"
         },
         "type" : "Feature"
       }, {
